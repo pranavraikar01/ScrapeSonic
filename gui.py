@@ -5,7 +5,7 @@ from tkinter import *
 from numpy.lib.polynomial import roots
 
 from pandas.core.frame import DataFrame
-from backend import Scraper
+from functionalities import Scraper
 from tkinter.ttk import *
 from tkinter.filedialog import asksaveasfile
 
