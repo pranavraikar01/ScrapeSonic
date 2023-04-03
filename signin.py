@@ -79,16 +79,14 @@ Input_password = Entry(frame1,
                        )
 Input_password.grid(column=1, row=25, padx=40)
 
-signuplabel = Label(frame1, text="Already have an account",
-                     font=("Arial", 12)).grid(column=0,
-                                              row=45, padx=20, pady=40)
+
 
 signup_button = Button(frame1, text='Signup',
-                      command=signup).grid(column=1, row=35, pady=10, padx=40)
+                      command=signup).grid(column=1, row=45, pady=10, padx=40)
 
 
 login_button = Button(frame1, text='Login',
-                      command=main_page).grid(column=1, row=35, pady=10, padx=40)
+                      command=main_page).grid(column=0, row=45, pady=10, padx=40)
 login_window.title("Scrape Sonic")
 
 login_window.wm_minsize(600, 500)
