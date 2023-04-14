@@ -11,7 +11,7 @@ description_view_window = tk.Tk()
 description_view_window.geometry("1000x1000")
 
 # Add image file
-bg = ImageTk.PhotoImage(Image.open("Backgrounds.png"))
+bg = ImageTk.PhotoImage(Image.open("Backgrounds2.jpg"))
 
 # Show image using label
 label1 = Label(description_view_window, image=bg)
@@ -86,7 +86,7 @@ page = tk.IntVar()
 pagechoosen = ttk.Combobox(frame1, width=7, textvariable=page)
 
 # adding Combobox drop down for choosing the number of pages
-pagechoosen['values'] = (1, 2, 3, 4, 5)
+pagechoosen['values'] = (1)
 
 pagechoosen.grid(column=3, row=5)
 pagechoosen.current()

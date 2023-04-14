@@ -13,7 +13,7 @@ table_view_window = tk.Tk()
 table_view_window.geometry("1000x1000")
 
 # Add image file
-bg = ImageTk.PhotoImage(Image.open("Backgrounds.png"))
+bg = ImageTk.PhotoImage(Image.open("Backgrounds2.jpg"))
 
 # Show image using label
 label1 = Label(table_view_window, image=bg)
