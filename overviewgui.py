@@ -24,12 +24,13 @@ frame1 = Frame(description_view_window
 frame1.pack(pady=40)
 # frame1.place(x=250,y=70)  #place function also does the same work as pack function does but pady is more convienent
 
+def back_to_mainpage():
+    description_view_window.destroy()
+    import mainpagegui
 
 class functions:
 
-    def back():
-        description_view_window.destroy()
-        import mainpagegui
+    
 
     def submit(self):
 
@@ -50,6 +51,7 @@ class functions:
 
 arr = []
 
+bg3 = ImageTk.PhotoImage(Image.open("back.png"))
 # below is used to show text on the frame
 Output = Text(frame1, height=20,
               width=120,
@@ -69,6 +71,7 @@ ttk.Label(frame1, text="Enter the Product :",
 ttk.Label(frame1, text="Pages :",
           font=("Arial", 12)).grid(column=2,
                                    row=5, padx=10, pady=25, columnspan=1)
+
 
 # category  Combobox creation
 category = tk.StringVar()
@@ -93,6 +96,10 @@ pagechoosen.current()
 
 submit_button = Button(frame1, text='Submit',
                        command=functions().submit).grid(column=4, row=5)
+
+backtobacktomainpagesignin = Button(description_view_window, text='back',
+                     width=15, command=back_to_mainpage,image=bg3)
+backtobacktomainpagesignin.place(x=900, y=550)
 
 
 # back = Button(description_view_window, text='Back',

@@ -26,6 +26,9 @@ frame1 = Frame(table_view_window
 frame1.pack(pady=20)
 # frame1.place(x=250,y=70)  #place function also does the same work as pack function does but pady is more convienent
 
+def back_to_mainpage():
+    table_view_window.destroy()
+    import mainpagegui
 
 class functions:
     def submit(self):
@@ -49,7 +52,6 @@ class functions:
         pt.show()
 
 
-arr = []
 
 
 ttk.Label(frame1, text="Scrape Sonic",
@@ -64,6 +66,10 @@ ttk.Label(frame1, text="Select the Product :",
 ttk.Label(frame1, text="Pages :",
           font=("Arial", 12)).grid(column=2,
                                    row=5, padx=10, pady=25, columnspan=1)
+
+
+bg3 = ImageTk.PhotoImage(Image.open("back.png"))
+
 
 # category  Combobox creation
 category = tk.StringVar()
@@ -88,7 +94,9 @@ pagechoosen.current()
 
 submit_button = Button(frame1, text='Submit',
                        command=functions().submit).grid(column=4, row=5)
-
+backtobacktomainpagesignin = Button(table_view_window, text='back',
+                     width=15, command=back_to_mainpage,image=bg3)
+backtobacktomainpagesignin.place(x=900, y=550)
 table_view_window.title("Scrape Sonic")
 
 table_view_window.wm_minsize(600, 500)
